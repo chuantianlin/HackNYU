@@ -4,6 +4,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
+///import "./AlbumArt.sol";
+
 contract Audio is Ownable, ERC721 {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
@@ -13,6 +15,7 @@ contract Audio is Ownable, ERC721 {
     string composer;
     string genre;
     string url;
+    ///AlbumArt art;
   }
 
   mapping(uint256 => Metadata) id_to_audio;
